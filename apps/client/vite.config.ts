@@ -6,7 +6,7 @@ export default defineConfig(() => ({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/apps/client',
   server: {
-    port: 5000,
+    port: 4200,
     host: '0.0.0.0',
     allowedHosts: ['*']
   },
