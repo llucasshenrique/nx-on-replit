@@ -41,9 +41,6 @@ externalPort = 80
 deploymentTarget = "autoscale"
 run = [
   "pnpm",
-  "install",
-  "&&",
-  "pnpm",
   "nx",
   "run-many",
   "-t",
