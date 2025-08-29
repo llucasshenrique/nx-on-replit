@@ -23,11 +23,15 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "pnpm install && pnpm nx run-many -t serve"
+args = "pnpm nx run-many -t serve dev"
 waitForPort = 4200
 
 [workflows.workflow.metadata]
 outputType = "webview"
+
+[[ports]]
+localPort = 3000
+externalPort = 3000
 
 [[ports]]
 localPort = 4200
@@ -35,4 +39,14 @@ externalPort = 80
 
 [deployment]
 deploymentTarget = "autoscale"
-run = ["pnpm", "install", "&&", "pnpm", "nx", "run-many", "-t", "serve", "start" ]
+run = [
+  "pnpm",
+  "install",
+  "&&",
+  "pnpm",
+  "nx",
+  "run-many",
+  "-t",
+  "serve",
+  "dev"
+]

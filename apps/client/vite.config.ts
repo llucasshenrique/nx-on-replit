@@ -8,11 +8,15 @@ export default defineConfig(() => ({
   server: {
     port: 4200,
     host: '0.0.0.0',
-    allowedHosts: ['*']
+    allowedHosts: [
+      '*',
+      '437b6494-b701-4b6a-a897-56cb26c887b6-00-2pwbrik3btyzr.kirk.replit.dev',
+    ],
   },
   preview: {
     port: 4300,
     host: '0.0.0.0',
+    allowedHosts: ['*'],
   },
   plugins: [!process.env.VITEST && reactRouter()],
   // Uncomment this if you are using workers.
