@@ -4,6 +4,8 @@ packages:
 autoInstallPeers: true
 
 onlyBuiltDependencies:
+  - '@nestjs/core'
+  - '@parcel/watcher'
   - '@swc/core'
   - nx
 
