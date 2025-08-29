@@ -4,10 +4,9 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  type MetaFunction,
   type LinksFunction,
+  type MetaFunction,
 } from 'react-router';
-
 import { AppNav } from './app-nav';
 
 export const meta: MetaFunction = () => [
@@ -39,7 +38,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <AppNav />
         {children}
         <ScrollRestoration />
         <Scripts />
