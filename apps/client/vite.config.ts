@@ -6,12 +6,13 @@ export default defineConfig(() => ({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/apps/client',
   server: {
-    port: 4200,
-    host: 'localhost',
+    port: 5000,
+    host: '0.0.0.0',
+    allowedHosts: ['*']
   },
   preview: {
     port: 4300,
-    host: 'localhost',
+    host: '0.0.0.0',
   },
   plugins: [!process.env.VITEST && reactRouter()],
   // Uncomment this if you are using workers.
